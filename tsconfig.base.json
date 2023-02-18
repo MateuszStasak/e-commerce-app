@@ -23,6 +23,9 @@
       ],
       "@e-commerce-app/api/generated-db-types": [
         "libs/api/generated-db-types/src/index.ts"
+      ],
+      "@e-commerce-app/web/data-access-graphql": [
+        "libs/web/data-access-graphql/src/index.ts"
       ]
     }
   },
