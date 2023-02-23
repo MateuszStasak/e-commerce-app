@@ -19,5 +19,5 @@ async function bootstrap() {
   await app.listen(port)
   Logger.log(`🚀 Application playground is running on: http://localhost:${port}/graphiql`)
 }
-
+// eslint-disable-next-line unicorn/prefer-top-level-await
 bootstrap().catch(console.log)
