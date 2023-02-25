@@ -13,7 +13,7 @@ async function bootstrap() {
     contentSecurityPolicy: isProd
   })
   app.enableCors()
-  
+
   await app.listen(api.port)
   Logger.log(`🚀 Application playground is running on: http://localhost:${api.port}/graphiql`)
 }
