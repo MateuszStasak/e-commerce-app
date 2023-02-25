@@ -44,6 +44,7 @@ Thumbs.db
 
 # Env files
 *.env
+.local.env
 
 #VSC 
 .vscode
