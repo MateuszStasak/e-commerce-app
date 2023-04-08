@@ -1,5 +1,5 @@
-import { gql } from '../data-access/graphql-client'
-import { webEnv } from '../environments/environment'
+import { gql } from '../../data-access/graphql-client'
+import { webEnv } from '../../environments/environment'
 import Image from 'next/image'
 import Link from 'next/link'
 import { rgbToDataUrl } from '@e-commerce-app/web/utils-shared'

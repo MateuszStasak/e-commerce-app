@@ -15,7 +15,7 @@ export interface IWebEnv {
   isProd: boolean
   api: {
     gqlUrl: string
-  },
+  }
   storage: {
     url: string
     endpoint: string
