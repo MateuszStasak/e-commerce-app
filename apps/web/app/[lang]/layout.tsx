@@ -37,7 +37,7 @@ export default async function RootLayout({
               width={100}
               height={30}
               alt={'logo'}
-              className="md:h-7 md:w-30"
+              className="md:w-30 md:h-7"
             />
 
             <div className="flex items-center gap-10">

@@ -21,17 +21,17 @@ const CREATE_USER = gql`
 `
 
 const GET_HOME_BLOCKS = gql`
-query getHomeImages {
-  homeBlocks {
-    id
-    title
-    imagePath
-    navigationPath
-    rgbBackground {
-      r
-      g
-      b
+  query getHomeImages {
+    homeBlocks {
+      id
+      title
+      imagePath
+      navigationPath
+      rgbBackground {
+        r
+        g
+        b
+      }
     }
   }
-}
 `
