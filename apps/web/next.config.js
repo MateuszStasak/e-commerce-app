@@ -19,9 +19,9 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: process.env.ECOM_WEB_STORAGE_ENDPOINT,
+        hostname: process.env.ECOM_WEB_STORAGE_ENDPOINT
       }
-    ],
+    ]
   }
 }
 

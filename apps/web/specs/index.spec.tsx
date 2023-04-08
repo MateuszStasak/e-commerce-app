@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 
-import Page from '../app/page'
+import Page from '../app/[lang]/page'
 import { gql } from '../data-access/graphql-client'
 
 gql.GetUsers = jest.fn().mockResolvedValue({ users: [] })
