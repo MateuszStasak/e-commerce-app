@@ -21,7 +21,7 @@ export class ApiEnvVo implements IApiEnv {
 
 class ApiEnvDbVo {
   @IsNotEmpty()
-  @IsString()
+  @IsString() 
   public url: string
 }
 

@@ -35,6 +35,7 @@
     ],
     "sharedGlobals": ["{workspaceRoot}/babel.config.json"]
   },
+  "defaultProject": "api",
   "generators": {
     "@nrwl/react": {
       "application": {

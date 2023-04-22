@@ -5,6 +5,8 @@
     "rootDir": ".",
     "module": "commonjs",
     "target": "es5",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "types": ["node"],
     "importHelpers": false
   },

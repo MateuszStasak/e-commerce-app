@@ -17,6 +17,8 @@
     "paths": {
       "@e-commerce-app/api/data-access-db": ["libs/api/data-access-db/src/index.ts"],
       "@e-commerce-app/api/feature-home-block": ["libs/api/feature-home-block/src/index.ts"],
+      "@e-commerce-app/api/feature-product": ["libs/api/feature-product/src/index.ts"],
+      "@e-commerce-app/api/feature-product-category": ["libs/api/feature-product-category/src/index.ts"],
       "@e-commerce-app/api/feature-user": ["libs/api/feature-user/src/index.ts"],
       "@e-commerce-app/api/generated-db-types": ["libs/api/generated-db-types/src/index.ts"],
       "@e-commerce-app/web/data-access-graphql": ["libs/web/data-access-graphql/src/index.ts"],

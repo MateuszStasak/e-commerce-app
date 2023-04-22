@@ -6,5 +6,6 @@ export const getGraphqlClient = (url: string, headers?: MaybeFunction<HeadersIni
   const client = new GraphQLClient(url, {
     headers
   })
+
   return getSdk(client)
 }
