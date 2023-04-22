@@ -6,39 +6,47 @@ import {
   FindUniqueHomeBlockArgs,
   UpdateOneHomeBlockArgs
 } from '@e-commerce-app/api/generated-db-types'
+import { Prisma } from '@prisma/client'
+
+const include: Prisma.HomeBlockInclude = {
+  image: {
+    include: {
+      rgbBackground: true
+    }
+  }
+}
 
 @Injectable()
 export class HomeBlockService {
-  constructor(private readonly prismaService: PrismaService) {}
+  constructor(private readonly prisma: PrismaService) {}
 
   create(createOneHomeBlockArgs: CreateOneHomeBlockArgs) {
-    return this.prismaService.homeBlock.create({
+    return this.prisma.homeBlock.create({
       data: createOneHomeBlockArgs.data,
-      include: { rgbBackground: true }
+      include
     })
   }
 
   findAll() {
-    return this.prismaService.homeBlock.findMany({ include: { rgbBackground: true } })
+    return this.prisma.homeBlock.findMany({ include })
   }
 
   findOne(findUniqueHomeBlockArgs: FindUniqueHomeBlockArgs) {
     const { where } = findUniqueHomeBlockArgs
-    return this.prismaService.homeBlock.findUnique({ where, include: { rgbBackground: true } })
+    return this.prisma.homeBlock.findUnique({ where, include })
   }
 
   update(updateOneHomeBlockArgs: UpdateOneHomeBlockArgs) {
-    return this.prismaService.homeBlock.update({
+    return this.prisma.homeBlock.update({
       data: updateOneHomeBlockArgs.data,
       where: updateOneHomeBlockArgs.where,
-      include: { rgbBackground: true }
+      include
     })
   }
 
   remove(deleteOneHomeBlockArgs: DeleteOneHomeBlockArgs) {
-    return this.prismaService.homeBlock.delete({
-      where: deleteOneHomeBlockArgs.where,
-      include: { rgbBackground: true }
+    return this.prisma.homeBlock.delete({
+      where: deleteOneHomeBlockArgs.where
     })
   }
 }

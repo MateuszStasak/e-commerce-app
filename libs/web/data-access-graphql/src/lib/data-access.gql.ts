@@ -10,24 +10,40 @@ const GET_USERS = gql`
   }
 `
 
-const CREATE_USER = gql`
-  mutation CreateUser {
-    createUser(data: { password: "Password1", name: "Matt S", email: "matt@test.com" }) {
-      name
+const GET_HOME_BLOCKS = gql`
+  query GetHomeImages {
+    homeBlocks {
       id
-      email
+      navigationPath
+      image {
+        title
+        imagePath
+        rgbBackground {
+          r
+          g
+          b
+        }
+      }
     }
   }
 `
 
-const GET_HOME_BLOCKS = gql`
-  query getHomeImages {
-    homeBlocks {
-      id
-      title
-      imagePath
-      navigationPath
-      rgbBackground {
+const GET_PRODUCTS = gql`
+  query GetProducts {
+    products {
+      name
+      price
+      discountPrice
+      images {
+        title
+        imagePath
+        rgbBackground {
+          r
+          g
+          b
+        }
+      }
+      availableColors {
         r
         g
         b

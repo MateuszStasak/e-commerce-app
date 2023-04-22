@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { ReactNode } from 'react'
 import { i18n, Locale } from '../../i18n/i18n-config'
 import { getDictionary } from '../../i18n/get-dictionary'
-import LocaleSwitcher from './component/locale-switcher'
 
 const lato = Lato({
   weight: ['400', '700'],
@@ -29,29 +28,25 @@ export default async function RootLayout({
 
   return (
     <html lang={params.lang} className={lato.className}>
-      <body>
-        <div className="mr-6 ml-6 max-w-screen-2xl md:ml-14 md:mr-14">
-          <nav className="flex h-20 items-center justify-between md:h-28 lg:h-36">
-            <Image
-              src={'/logo.svg'}
-              width={100}
-              height={30}
-              alt={'logo'}
-              className="md:w-30 md:h-7"
-            />
+      <body className="flex flex-col items-center">
+        <div className="w-full max-w-screen-2xl pr-6 md:pl-14 md:pr-14">
+          <nav className="mb-10 flex h-12 items-center justify-between bg-black bg-gradient-to-bl via-black to-black p-10 md:h-28 lg:h-36">
+            <Link href={'/'}>
+              <span className="text-2xl font-black text-white drop-shadow-2xl">Trendly</span>
+            </Link>
 
             <div className="flex items-center gap-10">
-              <Link href={'/menu'} className="text-xs uppercase text-black">
+              <Link href={'/menu'} className="text-sm uppercase text-white">
                 {navBar.menu}
               </Link>
-              <Link href={'/cart'} className="text-xs uppercase text-black">
+              <Link href={'/cart'} className="text-sm uppercase text-white">
                 {navBar.cart}
               </Link>
-
-              <LocaleSwitcher />
             </div>
           </nav>
           {children}
+
+          <footer className="mt-10 h-20 items-center justify-center bg-black bg-gradient-to-bl via-black to-black text-white md:h-28 lg:h-36"></footer>
         </div>
       </body>
     </html>
