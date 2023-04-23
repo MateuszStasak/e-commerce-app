@@ -4,7 +4,7 @@ import { FastifyAdapter, NestFastifyApplication } from '@nestjs/platform-fastify
 import helmet from '@fastify/helmet'
 import { AppModule } from './app/app.module'
 import { apiEnv } from './environments/environment'
-
+//
 const { isProd, api } = apiEnv
 
 const runHost = isProd ? '0.0.0.0' : 'localhost'
