@@ -3,7 +3,7 @@ import * as process from 'node:process'
 export const apiEnv: IApiEnv = {
   isProd: process.env.ECOM_ENV === 'production',
   api: {
-    port: +process.env.ECOM_API_PORT
+    port: +process.env.ECOM_API_PORT || 80
   },
   db: {
     url: process.env.ECOM_DB_URL
