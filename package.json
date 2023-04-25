@@ -30,7 +30,7 @@
     "cd:validate-web": "npx env-cmd ts-node --project tools/tsconfig.tools.json tools/environment/validate-web-env.ts",
     "cd:db-push": "npx prisma db push --accept-data-loss",
     "cd:db-seed": "npx ts-node --project tools/tsconfig.tools.json tools/database/seed.dev.ts",
-    "start":"node dist/apps/api/main.js",
+    "start":"node main.js",
     "build":"npm run cd:api"
   },
   "private": true,
