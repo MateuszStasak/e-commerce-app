@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("postgresql://postgres:KiaraINala12@db.seigdfcnfbuhlupdgjsm.supabase.co:5432/postgres?schema=public")
+  url      = "postgresql://postgres:KiaraINala12@db.seigdfcnfbuhlupdgjsm.supabase.co:5432/postgres?schema=public"
 }
 
 generator nestgraphql {
