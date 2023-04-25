@@ -3,10 +3,10 @@ import * as process from 'node:process'
 export const apiEnv: IApiEnv = {
   isProd: process.env.ECOM_ENV === 'production',
   api: {
-    port: 333
+    port: process.env.ECOM_API_PORT
   },
   db: {
-    url: "postgresql://postgres:KiaraINala12@db.seigdfcnfbuhlupdgjsm.supabase.co:5432/postgres?schema=public"
+    url: process.env.ECOM_DB_URL
   }
 }
 
