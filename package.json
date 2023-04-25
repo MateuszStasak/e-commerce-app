@@ -11,7 +11,7 @@
     "start:api": "nx serve api",
     "start:web": "nx serve web",
     "----NX SECTION----": "-------------------------",
-    "build": "nx build",
+    "build:nx": "nx build",
     "test": "nx test",
     "----DB SECTION----": "-------------------------",
     "db:dockers:dev": "docker-compose -f tools/okkino-environment/dev.docker-compose.yml up -d --no-recreate --remove-orphans",
@@ -29,7 +29,9 @@
     "cd:validate-api": "npx ts-node --project tools/tsconfig.tools.json tools/environment/validate-api-env.ts",
     "cd:validate-web": "npx ts-node --project tools/tsconfig.tools.json tools/environment/validate-web-env.ts",
     "cd:db-push": "npx prisma db push --accept-data-loss",
-    "cd:db-seed": "npx ts-node --project tools/tsconfig.tools.json tools/database/seed.dev.ts"
+    "cd:db-seed": "npx ts-node --project tools/tsconfig.tools.json tools/database/seed.dev.ts",
+    "start":"node dist/apps/api/main.js",
+    "build":"npm run cd:api"
   },
   "private": true,
   "dependencies": {
